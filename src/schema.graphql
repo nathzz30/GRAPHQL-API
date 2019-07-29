@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Car {
+  id: ID!
+  brand: String!
+  model: String!
+  year: Int!
+}
+
+type Query {
+    users: [User!]!
+    cars: [Car!]!
+    test: String!
+    car(id: ID, model: String, year: Int, brand: String): [Car]!
+}
